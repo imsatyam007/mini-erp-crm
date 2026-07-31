@@ -287,7 +287,7 @@ Suggested screenshots:
 
 # 👨‍💻 Author
 
-**Satyam Kumar**
+**Satyam Choudhary**
 
 - GitHub: https://github.com/imsatyam007
 
