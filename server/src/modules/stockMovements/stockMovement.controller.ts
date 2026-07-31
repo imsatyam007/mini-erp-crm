@@ -1,10 +1,10 @@
 import type { Request, Response } from "express";
-import { createStockMovementSchema } from "./stockMovement.validation";
+import { createStockMovementSchema } from "./stockMovement.validation.js";
 import {
   createStockMovement,
   getAllStockMovements,
   getStockMovementById,
-} from "./stockMovement.service";
+} from "./stockMovement.service.js";
 
 export const create = async (req: Request, res: Response) => {
   try {
