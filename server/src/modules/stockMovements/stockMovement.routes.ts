@@ -5,7 +5,7 @@ import {
   create,
   getAll,
   getById,
-} from "./stockMovement.controller";
+} from "./stockMovement.controller.js";
 
 import { authenticate } from "../../middleware/auth.middleware.js";
 import { authorize } from "../../middleware/role.middleware.js";
