@@ -1,0 +1,121 @@
+/* =====================================================
+   Tailwind Theme Tokens
+===================================================== */
+
+@theme {
+  /* ==========================
+     Brand Colors
+  ========================== */
+
+  --color-primary: #5c6e58;
+  --color-primary-hover: #4f604b;
+
+  --color-secondary: #8aa899;
+
+  --color-accent: #f2d349;
+  --color-accent-dark: #d9b531;
+
+  /* ==========================
+     Backgrounds
+  ========================== */
+
+  --color-background: #faf7f0;
+  --color-surface: #ffffff;
+
+  /* ==========================
+     Text
+  ========================== */
+
+  --color-text: #5c6e58;
+  --color-text-secondary: #8aa899;
+
+  /* ==========================
+     Sidebar
+  ========================== */
+
+  --color-sidebar-bg: #5c6e58;
+  --color-sidebar-text: #ffffff;
+  --color-sidebar-hover: rgba(255, 255, 255, 0.12);
+  --color-sidebar-active: #f2d349;
+  --color-sidebar-active-text: #5c6e58;
+
+  /* ==========================
+     Border
+  ========================== */
+
+  --color-border: #e9e3d5;
+
+  /* ==========================
+     Status
+  ========================== */
+
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-neutral: #9ca3af;
+
+  /* ==========================
+     Status Backgrounds
+  ========================== */
+
+  --color-success-bg: #e8f7ed;
+  --color-warning-bg: #fff7e5;
+  --color-danger-bg: #fdecec;
+  --color-neutral-bg: #f3f4f6;
+
+  /* ==========================
+     Focus
+  ========================== */
+
+  --color-focus: #8aa899;
+
+  /* ==========================
+     Border Radius
+  ========================== */
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* ==========================
+     Spacing
+  ========================== */
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  /* ==========================
+     Shadows
+  ========================== */
+
+  --shadow-card: 0 4px 12px rgba(92, 110, 88, 0.08);
+  --shadow-dropdown: 0 8px 24px rgba(92, 110, 88, 0.12);
+  --shadow-sm: 0 1px 3px rgba(92,110,88,.08);
+
+    /* ==========================
+     disabled
+    ========================== */
+
+    --color-disabled: #d6d3cd;
+    --color-disabled-text: #8b8b8b;
+
+    /* Overlay */
+
+    --color-overlay: rgba(92,110,88,.35);
+}
+
+/* =====================================================
+   Non-Tailwind Tokens (kept out of @theme on purpose —
+   Tailwind won't generate utilities from these anyway,
+   so there's no benefit to putting them inside @theme)
+===================================================== */
+
+:root {
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+}
