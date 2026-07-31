@@ -1,5 +1,5 @@
 import { PrismaClient, MovementType } from "@prisma/client";
-import type { CreateStockMovementInput } from "./stockMovement.validation";
+import type { CreateStockMovementInput } from "./stockMovement.validation.js";
 
 const prisma = new PrismaClient();
 

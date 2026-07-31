@@ -5,7 +5,7 @@ import authRoutes from "./modules/auth/auth.routes.js";
 import customerRoutes from "./modules/customers/customer.routes.js";
 import productRoutes from "./modules/products/product.routes.js";
 import stockMovementRoutes from "./modules/stockMovements/stockMovement.routes.js";
-import challanRoutes from "./modules/challans/challan.routes";
+import challanRoutes from "./modules/challans/challan.routes.js";
 import { errorHandler } from "./middleware/error.middleware.js";
 
 import { authenticate } from "./middleware/auth.middleware.js";

@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
 
-import challanService from "./challan.service";
-import { createChallanSchema } from "./challan.validation";
+import challanService from "./challan.service.js";
+import { createChallanSchema } from "./challan.validation.js";
 
 class ChallanController {
   /**
