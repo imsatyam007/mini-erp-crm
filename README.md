@@ -259,8 +259,6 @@ npm run dev
 
 # 📸 Screenshots
 
-# 📸 Screenshots
-
 ## 🔐 Login Page
 
 ![Login](screenshots/login.png)
