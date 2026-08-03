@@ -10,14 +10,11 @@ export default function InventoryPage() {
     createStockMovement,
   } = useStockMovements();
 
-  const handleCreateMovement = async (data: Parameters<
-    typeof createStockMovement
-  >[0]) => {
-    const success = await createStockMovement(data);
-
-    if (success) {
-      alert("Stock movement created successfully.");
-    }
+  const handleCreateMovement = async (
+    data: Parameters<typeof createStockMovement>[0]
+  ) => {
+    await createStockMovement(data);
+    alert("Stock movement created successfully.");
   };
 
   return (
