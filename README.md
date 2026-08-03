@@ -1,76 +1,95 @@
-# 🚀 Mini ERP + CRM
+# Mini ERP + CRM
 
-A full-stack **Enterprise Resource Planning (ERP)** and **Customer Relationship Management (CRM)** application built with modern web technologies. This project provides secure role-based authentication and comprehensive modules for customer management, product management, inventory tracking, and sales challan management.
+A full-stack **Enterprise Resource Planning (ERP)** and **Customer Relationship Management (CRM)** application built with modern web technologies. The platform provides secure, role-based authentication and dedicated modules for customer management, product management, inventory tracking, and sales challan management.
 
----
-
-## 📌 Overview
-
-Mini ERP + CRM is designed to streamline business operations by providing a centralized platform for managing customers, products, inventory, and sales. The application follows a clean architecture with separate frontend and backend services and implements secure authentication with role-based access control.
+[![Frontend](https://img.shields.io/badge/Frontend-Live-success)](https://mini-erp-crm-eta.vercel.app)
+[![Backend](https://img.shields.io/badge/Backend-Live-success)](https://mini-erp-crm-backend-5sgi.onrender.com)
+[![License](https://img.shields.io/badge/License-Educational-blue)]()
 
 ---
 
-## ✨ Features
+## Live Demo
 
-### 🔐 Authentication & Authorization
+| Service | URL |
+|---|---|
+| Frontend | [mini-erp-crm-eta.vercel.app](https://mini-erp-crm-eta.vercel.app) |
+| Backend API | [mini-erp-crm-backend-5sgi.onrender.com](https://mini-erp-crm-backend-5sgi.onrender.com) |
 
-- JWT Authentication
-- Secure Login & Logout
-- Password Hashing using bcrypt
-- Protected Routes
-- Role-Based Access Control (RBAC)
-
-### 👥 User Roles
-
-- 👑 Admin
-- 💼 Sales
-- 📦 Warehouse
-- 💰 Accounts
-
-### 📊 Dashboard
-
-- Responsive Dashboard
-- Fixed Sidebar
-- Fixed Header
-- Role-Based Navigation
-
-### 👤 Customer Management
-
-- Add Customer
-- View Customer Details
-- Update Customer
-- Delete Customer
-- Search Customers
-
-### 📦 Product Management
-
-- Add Product
-- View Products
-- Update Product
-- Delete Product
-
-### 📦 Inventory Management
-
-- Stock In
-- Stock Out
-- Inventory Movement History
-- Stock Validation
-- Prevent Negative Stock
-
-### 📄 Sales Challan
-
-- Create Sales Challans
-- Multiple Products per Challan
-- Auto Challan Number Generation
-- Draft & Confirm Status
-- Product Snapshot
+> **Note:** The backend is hosted on a free-tier instance and may take a few seconds to spin up after inactivity.
 
 ---
 
-# 🛠 Tech Stack
+## Table of Contents
 
-## Frontend
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Deployment](#deployment)
+- [System Architecture](#system-architecture)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Default User Roles](#default-user-roles)
+- [Demo Credentials](#demo-credentials)
+- [REST API Reference](#rest-api-reference)
+- [Screenshots](#screenshots)
+- [Learning Outcomes](#learning-outcomes)
+- [Future Enhancements](#future-enhancements)
+- [Author](#author)
+- [License](#license)
 
+---
+
+## Overview
+
+Mini ERP + CRM streamlines core business operations by providing a centralized platform for managing customers, products, inventory, and sales. The application follows a clean, modular architecture with clearly separated frontend and backend services, and implements secure authentication with role-based access control throughout.
+
+---
+
+## Features
+
+### Authentication & Authorization
+- JWT-based authentication
+- Secure login and logout flow
+- Password hashing with bcrypt
+- Protected routes
+- Role-based access control (RBAC)
+
+### User Roles
+- Admin
+- Sales
+- Warehouse
+- Accounts
+
+### Dashboard
+- Responsive layout
+- Fixed sidebar and header
+- Role-based navigation
+
+### Customer Management
+- Add, view, update, and delete customers
+- Search customers
+
+### Product Management
+- Add, view, update, and delete products
+
+### Inventory Management
+- Stock in / stock out
+- Inventory movement history
+- Stock validation
+- Prevention of negative stock
+
+### Sales Challan
+- Create sales challans
+- Multiple products per challan
+- Auto-generated challan numbers
+- Draft and confirm statuses
+- Product snapshot at time of creation
+
+---
+
+## Tech Stack
+
+**Frontend**
 - React
 - TypeScript
 - Vite
@@ -81,8 +100,7 @@ Mini ERP + CRM is designed to streamline business operations by providing a cent
 - Zod
 - Tailwind CSS
 
-## Backend
-
+**Backend**
 - Node.js
 - Express.js
 - TypeScript
@@ -90,32 +108,57 @@ Mini ERP + CRM is designed to streamline business operations by providing a cent
 - JWT Authentication
 - bcrypt
 
-## Database
-
+**Database**
 - PostgreSQL
 
 ---
 
-# 📂 Project Structure
+## Deployment
+
+| Layer | Platform |
+|---|---|
+| Frontend | Vercel |
+| Backend | Render |
+| Database | Neon PostgreSQL |
+
+---
+
+## System Architecture
+
+```text
+                 React + TypeScript
+                        │
+                    Axios (HTTP Client)
+                        │
+             Express.js + TypeScript (REST API)
+                        │
+                  Prisma ORM
+                        │
+             PostgreSQL (Neon Cloud)
+```
+
+---
+
+## Project Structure
 
 ```text
 mini-erp-crm/
 │
-├── 📂 frontend/
-│   ├── 📂 src/
-│   │   ├── 📂 api
-│   │   ├── 📂 components
+├── frontend/
+│   ├── src/
+│   │   ├── api
+│   │   ├── components
 │   │   │   ├── common
 │   │   │   ├── forms
 │   │   │   ├── layout
 │   │   │   ├── tables
 │   │   │   └── ui
-│   │   ├── 📂 constants
-│   │   ├── 📂 context
-│   │   ├── 📂 hooks
-│   │   ├── 📂 layouts
-│   │   ├── 📂 lib
-│   │   ├── 📂 pages
+│   │   ├── constants
+│   │   ├── context
+│   │   ├── hooks
+│   │   ├── layouts
+│   │   ├── lib
+│   │   ├── pages
 │   │   │   ├── auth
 │   │   │   ├── customers
 │   │   │   ├── products
@@ -123,34 +166,34 @@ mini-erp-crm/
 │   │   │   ├── challans
 │   │   │   ├── dashboard
 │   │   │   └── not-found
-│   │   ├── 📂 routes
-│   │   ├── 📂 schemas
-│   │   ├── 📂 services
-│   │   ├── 📂 styles
-│   │   ├── 📂 types
-│   │   ├── 📂 utils
+│   │   ├── routes
+│   │   ├── schemas
+│   │   ├── services
+│   │   ├── styles
+│   │   ├── types
+│   │   ├── utils
 │   │   ├── App.tsx
 │   │   └── main.tsx
 │   │
 │   ├── package.json
 │   └── vite.config.ts
 │
-├── 📂 server/
-│   ├── 📂 prisma
-│   ├── 📂 src/
-│   │   ├── 📂 config
-│   │   ├── 📂 lib
-│   │   ├── 📂 middleware
-│   │   ├── 📂 modules
+├── server/
+│   ├── prisma
+│   ├── src/
+│   │   ├── config
+│   │   ├── lib
+│   │   ├── middleware
+│   │   ├── modules
 │   │   │   ├── auth
 │   │   │   ├── customers
 │   │   │   ├── products
 │   │   │   ├── inventory
 │   │   │   ├── stockMovements
 │   │   │   └── challans
-│   │   ├── 📂 routes
-│   │   ├── 📂 types
-│   │   ├── 📂 utils
+│   │   ├── routes
+│   │   ├── types
+│   │   ├── utils
 │   │   ├── app.ts
 │   │   └── server.ts
 │   │
@@ -163,23 +206,19 @@ mini-erp-crm/
 
 ---
 
-# ⚙️ Installation
+## Installation
 
-## Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/imsatyam007/mini-erp-crm.git
-
 cd mini-erp-crm
 ```
 
----
-
-## Backend Setup
+### 2. Backend setup
 
 ```bash
 cd server
-
 npm install
 ```
 
@@ -187,37 +226,32 @@ Create a `.env` file:
 
 ```env
 PORT=5000
-
 DATABASE_URL=your_postgresql_database_url
-
 JWT_SECRET=your_secret_key
 ```
 
-Generate Prisma Client
+Generate the Prisma client:
 
 ```bash
 npx prisma generate
 ```
 
-Run Database Migrations
+Run database migrations:
 
 ```bash
 npx prisma migrate dev
 ```
 
-Start the Backend Server
+Start the backend server:
 
 ```bash
 npm run dev
 ```
 
----
-
-## Frontend Setup
+### 3. Frontend setup
 
 ```bash
 cd frontend
-
 npm install
 ```
 
@@ -227,7 +261,7 @@ Create a `.env` file:
 VITE_API_URL=http://localhost:5000/api
 ```
 
-Start the Frontend
+Start the frontend:
 
 ```bash
 npm run dev
@@ -235,91 +269,145 @@ npm run dev
 
 ---
 
-# 🔑 Default User Roles
+## Default User Roles
 
 | Role | Access |
-|------|--------|
-| 👑 Admin | Full System Access |
-| 💼 Sales | Customers, Sales Challans |
-| 📦 Warehouse | Products, Inventory |
-| 💰 Accounts | Accounts Module |
+|---|---|
+| Admin | Full system access |
+| Sales | Customers, sales challans |
+| Warehouse | Products, inventory |
+| Accounts | Accounts module |
 
 ---
 
-# 📡 API Modules
+## Demo Credentials
 
-- Authentication
-- Customers
-- Products
-- Inventory
-- Stock Movements
-- Sales Challans
+Use the credentials below to explore the live demo:
+
+| Email | Password |
+|---|---|
+| admin@gmail.com | ******** |
+
+> These are demo-only credentials intended for evaluation. Please avoid entering real personal or sensitive data on the live demo.
 
 ---
 
-# 📸 Screenshots
+## REST API Reference
 
-## 🔐 Login Page
+### Authentication
+```
+POST   /api/auth/login
+POST   /api/auth/register
+GET    /api/auth/me
+```
+
+### Customers
+```
+GET    /api/customers
+POST   /api/customers
+PUT    /api/customers/:id
+DELETE /api/customers/:id
+```
+
+### Products
+```
+GET    /api/products
+POST   /api/products
+PUT    /api/products/:id
+DELETE /api/products/:id
+```
+
+### Inventory / Stock Movements
+```
+GET    /api/stock-movements
+POST   /api/stock-movements
+```
+
+### Sales Challans
+```
+GET    /api/challans
+POST   /api/challans
+PUT    /api/challans/:id
+DELETE /api/challans/:id
+```
+
+---
+
+## Screenshots
+
+**Login Page**
 
 ![Login](screenshots/login.png)
 
----
-
-## 📊 Dashboard
+**Dashboard**
 
 ![Dashboard](screenshots/dashboard.png)
 
----
-
-## 👥 Customers
+**Customers**
 
 ![Customers](screenshots/customers.png)
 
----
-
-## 📦 Products
+**Products**
 
 ![Products](screenshots/product.png)
 
----
-
-## 📈 Inventory
+**Inventory**
 
 ![Inventory](screenshots/inventory.png)
 
----
-
-## 📄 Sales Challans
+**Sales Challans**
 
 ![Sales Challans](screenshots/sales-challans.png)
 
-# 🚀 Future Enhancements
+---
 
-- Dashboard Analytics
-- Reports & Charts
-- Export to Excel
-- PDF Challan Generation
-- Email Notifications
-- Audit Logs
-- Dark Mode
-- Responsive Mobile Layout
+## Learning Outcomes
+
+Building this project involved hands-on experience with:
+
+- Full-stack application design and development
+- REST API design principles
+- JWT authentication and role-based authorization
+- Prisma ORM and relational schema design
+- PostgreSQL database design
+- React with TypeScript
+- Deployment workflows using Vercel and Render
+- Neon PostgreSQL integration
+- Git and GitHub collaboration workflow
 
 ---
 
-# 👨‍💻 Author
+## Future Enhancements
+
+- Dashboard analytics
+- Sales reports and revenue charts
+- Export to Excel
+- PDF invoice generation
+- Email notifications
+- Audit logs
+- Product image upload
+- Pagination
+- Search and filters
+- Mobile-responsive layout
+- Dark mode
+
+---
+
+## Author
 
 **Satyam Choudhary**
 
-- GitHub: https://github.com/imsatyam007
+- GitHub: [github.com/imsatyam007](https://github.com/imsatyam007)
+- LinkedIn: [linkedin.com/in/your-profile](linkedin.com/in/satyam-coudhary-b41a89301)
 
 ---
 
-# ⭐ Support
+## Support
 
-If you found this project helpful, consider giving it a ⭐ on GitHub.
+If you found this project useful, consider giving it a star on GitHub.
 
 ---
 
-# 📄 License
+## License
 
 This project was developed for learning and portfolio purposes.
