@@ -259,18 +259,41 @@ npm run dev
 
 # 📸 Screenshots
 
-> Screenshots will be added after deployment.
+# 📸 Screenshots
 
-Suggested screenshots:
+## 🔐 Login Page
 
-- Login Page
-- Dashboard
-- Customer Management
-- Product Management
-- Inventory Management
-- Sales Challans
+![Login](screenshots/login.png)
 
 ---
+
+## 📊 Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## 👥 Customers
+
+![Customers](screenshots/customers.png)
+
+---
+
+## 📦 Products
+
+![Products](screenshots/product.png)
+
+---
+
+## 📈 Inventory
+
+![Inventory](screenshots/inventory.png)
+
+---
+
+## 📄 Sales Challans
+
+![Sales Challans](screenshots/sales-challans.png)
 
 # 🚀 Future Enhancements
 
